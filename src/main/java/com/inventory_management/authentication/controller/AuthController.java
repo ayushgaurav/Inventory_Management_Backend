@@ -54,10 +54,5 @@ public class AuthController {
                     .body(ApiResponseWrapper.error(e.getMessage(), "Failed to retrieve user details"));
         }
     }
-
-    @GetMapping("/test")
-    public ResponseEntity<ApiResponseWrapper<String>> test() {
-        return ResponseEntity.ok(ApiResponseWrapper.success("Auth controller is working!", "Test endpoint successful"));
-    }
 }
 

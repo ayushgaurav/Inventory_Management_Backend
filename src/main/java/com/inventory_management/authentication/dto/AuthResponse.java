@@ -15,6 +15,9 @@ public class AuthResponse {
     private String firstName;
     private String lastName;
     private String phoneNumber;
+    private Long orgId;
+    private String organizationName;
+    private Boolean verified;
     private String token;
     private String role;
 }

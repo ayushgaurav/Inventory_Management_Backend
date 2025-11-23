@@ -10,19 +10,6 @@
       "name": "Authentication",
       "item": [
         {
-          "name": "Test Endpoint",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{baseUrl}}/api/auth/test",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "auth", "test"]
-            },
-            "description": "Test if the authentication controller is working"
-          }
-        },
-        {
           "name": "Register User",
           "event": [
             {
@@ -51,7 +38,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"phoneNumber\": \"1234567890\"\n}"
+              "raw": "{\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"password123\",\n  \"organizationName\": \"Acme Corp\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"phoneNumber\": \"1234567890\"\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/api/auth/register",
