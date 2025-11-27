@@ -10,6 +10,12 @@ http://localhost:8080
 ### Authentication
 - [Authentication.md](Authentication.md) - Register, Login, Get Current User
 
+### Store Management
+- [Store.md](Store.md) - Create Store, Get All Stores, Get Store by ID
+
+### Category Management
+- [Category.md](Category.md) - CRUD operations for Categories
+
 ## Quick Start
 
 1. **Register a user:**

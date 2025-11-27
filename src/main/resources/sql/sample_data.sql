@@ -14,3 +14,26 @@ VALUES ('admin@acme.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uh
 INSERT INTO users (email, password, first_name, last_name, phone_number, org_id, role, is_active, verified, created_at, updated_at)
 VALUES ('user@acme.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'John', 'Doe', '9876543210', 1, 'USER', TRUE, FALSE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
 
+-- Insert sample stores
+INSERT INTO stores (name, location_type, manager_name, full_address, phone_number, email, org_id, is_active, created_at, updated_at)
+VALUES ('Main Warehouse', 'WAREHOUSE', 'Sarah Johnson', '123 Warehouse Blvd, City, State 12345', '1555-100-0001', 'warehouse@acme.com', 1, TRUE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
+
+INSERT INTO stores (name, location_type, manager_name, full_address, phone_number, email, org_id, is_active, created_at, updated_at)
+VALUES ('Downtown Store', 'RETAIL_STORE', 'Michael Chen', '456 Main Street, Downtown, State 12346', '1555-100-0002', 'downtown@acme.com', 1, TRUE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
+
+INSERT INTO stores (name, location_type, manager_name, full_address, phone_number, email, org_id, is_active, created_at, updated_at)
+VALUES ('Northside Branch', 'RETAIL_STORE', 'Emily Rodriguez', '789 North Ave, Northside, State 12347', '1555-100-0003', 'northside@acme.com', 1, TRUE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
+
+-- Insert sample categories
+INSERT INTO categories (name, description, org_id, is_active, created_at, updated_at)
+VALUES ('Electronics', 'Electronic devices and components', 1, TRUE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
+
+INSERT INTO categories (name, description, org_id, is_active, created_at, updated_at)
+VALUES ('Accessories', 'Various accessories and add-ons', 1, TRUE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
+
+INSERT INTO categories (name, description, org_id, is_active, created_at, updated_at)
+VALUES ('Furniture', 'Office and workspace furniture', 1, TRUE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
+
+INSERT INTO categories (name, description, org_id, is_active, created_at, updated_at)
+VALUES ('Lighting', 'Lighting solutions and fixtures', 1, TRUE, UNIX_TIMESTAMP() * 1000, UNIX_TIMESTAMP() * 1000);
+
