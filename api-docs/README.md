@@ -16,6 +16,9 @@ http://localhost:8080
 ### Category Management
 - [Category.md](Category.md) - CRUD operations for Categories
 
+### Supplier Management
+- [Supplier.md](Supplier.md) - CRUD operations for Suppliers
+
 ## Quick Start
 
 1. **Register a user:**

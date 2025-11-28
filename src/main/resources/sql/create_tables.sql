@@ -53,6 +53,27 @@ CREATE TABLE IF NOT EXISTS categories (
     FOREIGN KEY (org_id) REFERENCES organizations(id)
 );
 
+-- Create Suppliers Table
+CREATE TABLE IF NOT EXISTS suppliers (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    company_name VARCHAR(150) NOT NULL,
+    contact_person VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    address VARCHAR(500),
+    payment_terms VARCHAR(50),
+    credit_limit DECIMAL(15,2) DEFAULT 0,
+    notes TEXT,
+    total_purchases DECIMAL(15,2) DEFAULT 0,
+    credit_used DECIMAL(15,2) DEFAULT 0,
+    rating DECIMAL(3,1) DEFAULT 0,
+    org_id BIGINT NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at BIGINT NOT NULL,
+    updated_at BIGINT NOT NULL,
+    FOREIGN KEY (org_id) REFERENCES organizations(id)
+);
+
 -- Create Indexes for better query performance
 CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_users_org_id ON users(org_id);
@@ -61,4 +82,7 @@ CREATE INDEX idx_stores_org_id ON stores(org_id);
 CREATE INDEX idx_stores_name_org ON stores(name, org_id);
 CREATE INDEX idx_categories_org_id ON categories(org_id);
 CREATE INDEX idx_categories_name_org ON categories(name, org_id);
+CREATE INDEX idx_suppliers_org_id ON suppliers(org_id);
+CREATE INDEX idx_suppliers_company_org ON suppliers(company_name, org_id);
+CREATE INDEX idx_suppliers_email_org ON suppliers(email, org_id);
 
