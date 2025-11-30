@@ -24,3 +24,4 @@ public class StoreResponse {
     private Long updatedAt;
 }
 
+

@@ -285,3 +285,4 @@ Common payment terms values:
 - `Due on Receipt` - Payment due immediately
 - `COD` - Cash on Delivery
 
+

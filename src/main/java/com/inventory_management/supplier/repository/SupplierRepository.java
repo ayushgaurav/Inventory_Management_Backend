@@ -16,3 +16,4 @@ public interface SupplierRepository extends JpaRepository<Supplier, Long> {
     boolean existsByEmailAndOrgId(String email, Long orgId);
 }
 
+
